@@ -4,8 +4,6 @@ import styles from "../styles/Home.module.css";
 import Slider from "react-slick";
 
 export default function Home({ data }) {
-  console.log(data);
-
   const settings = {
     dots: true,
     arrows: true,
