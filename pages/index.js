@@ -1,7 +1,6 @@
 import Head from "next/head";
-
+import Link from "next/link";
 import styles from "../styles/Home.module.css";
-
 import Slider from "react-slick";
 
 export default function Home({ data }) {
@@ -21,7 +20,7 @@ export default function Home({ data }) {
       <div className="container">
         <Slider {...settings}>
           {data.map((element, index) => (
-            <div key={index} onClick={() => console.log(index)}>
+            <Link key={index} href={"/" + `${element["ID Year"]}`}>
               <div className="slide-wrapper">
                 <div className="nation-id">({element["ID Nation"]})</div>
                 <div className="nation">{element["Nation"]}</div>
@@ -30,7 +29,7 @@ export default function Home({ data }) {
                   Population: {element["Population"]}
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </Slider>
       </div>
@@ -38,7 +37,7 @@ export default function Home({ data }) {
   );
 }
 
-export async function getStaticProps() {
+export async function getStaticProps(context) {
   try {
     const res = await fetch(
       "https://datausa.io/api/data?drilldowns=Nation&measures=Population"

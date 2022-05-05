@@ -48,12 +48,57 @@ a {
   font-size: 14px;
 }
 
-.slide-wrapper {
-  background-color: #c9eef5;
+.slide-wrapper,
+.query-wrapper {
   width: 40%;
   text-align: center;
   padding: 20px;
   margin: 10px auto 10px auto;
   border-radius: 5px;
+}
+
+.slide-wrapper {
+  background-color: #c9eef5;
   cursor: pointer;
+}
+
+.query-wrapper {
+  background-color: #f7f9cf;
+}
+
+.show-population {
+  background: green;
+  border: none;
+  color: white;
+  padding: 10px 20px 10px 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.home-link {
+  font-weight: bold;
+  margin-top: 10px;
+  text-decoration: underline;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+#modal {
+  width: 20%;
+  background: blue;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  padding: 20px 0 20px 0;
+  border-radius: 10px;
+  margin-top: 20px;
 }
